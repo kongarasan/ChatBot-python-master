@@ -1,0 +1,159 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+     "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+     "context": [""]
+    },
+    {"tag": "adverse_drug",
+     "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
+     "responses": ["Navigating to Adverse drug reaction module"],
+     "context": [""]
+    },
+    {"tag": "blood_pressure",
+     "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
+     "responses": ["Navigating to Blood Pressure module"],
+     "context": [""]
+    },
+    {"tag": "blood_pressure_search",
+     "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+     "responses": ["Please provide Patient ID", "Patient ID?"],
+     "context": ["search_blood_pressure_by_patient_id"]
+    },
+    {"tag": "search_blood_pressure_by_patient_id",
+     "patterns": [],
+     "responses": ["Loading Blood pressure result for Patient"],
+     "context": [""]
+    },
+    {"tag": "pharmacy_search",
+     "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+     "responses": ["Please provide pharmacy name"],
+     "context": ["search_pharmacy_by_name"]
+    },
+    {"tag": "search_pharmacy_by_name",
+     "patterns": [],
+     "responses": ["Loading pharmacy details"],
+     "context": [""]
+    },
+    {"tag": "hospital_search",
+     "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+     "responses": ["Please provide hospital name or location"],
+     "context": ["search_hospital_by_params"]
+    },
+    {"tag": "search_hospital_by_params",
+     "patterns": [],
+     "responses": ["Please provide hospital type"],
+     "context": ["search_hospital_by_type"]
+    },
+    {"tag": "search_hospital_by_type",
+     "patterns": [],
+     "responses": ["Loading hospital details"],
+     "context": [""]
+    },
+    {"tag": "covid_19_detection",
+
+        "patterns": ["Check for COVID-19", "COVID-19 test", "Do I have COVID-19?", "COVID-19 detection"],
+        "responses": ["I can help you with COVID-19 detection. Please provide your symptoms and recent travel history."],
+        "context": [""]
+    },
+    {"tag": "pneumonia_detection",
+     "patterns": ["Detecting pneumonia", "How can I know if I have pneumonia?", "Pneumonia diagnosis", "Pneumonia detection methods"],
+     "responses": ["Pneumonia can be detected through X-rays and CT scans. Have you experienced any chest pain or breathing difficulties?"],
+     "context": [""]
+    },
+    {"tag": "symptom_reporting",
+     "patterns": ["Report COVID-19 symptoms", "Share pneumonia symptoms", "Symptom tracking for respiratory diseases", "Recording symptoms for diagnosis"],
+     "responses": ["To assist you better, please tell me about your symptoms and their duration."],
+     "context": [""]
+    },
+    {"tag": "covid19_prevention",
+     "patterns": ["How to prevent COVID-19?", "COVID-19 safety tips", "Prevent coronavirus", "Stay safe from COVID-19"],
+     "responses": ["Here are some COVID-19 prevention tips: hand hygiene, mask-wearing, social distancing, and vaccination."],
+     "context": [""]
+    },
+    {"tag": "pneumonia_prevention",
+     "patterns": ["How to prevent pneumonia?", "Pneumonia prevention tips", "Avoid pneumonia", "Stay safe from pneumonia"],
+     "responses": ["Pneumonia prevention includes vaccination, good hygiene, and avoiding smoking and excess alcohol."],
+     "context": [""]
+    },
+    {"tag": "resnet_algorithm",
+     "patterns": ["Tell me about ResNet", "What is the ResNet algorithm?", "How does ResNet work?", "Explain ResNet"],
+     "responses": ["ResNet is a deep learning architecture known for its ability to train very deep neural networks. It uses skip connections to avoid vanishing gradient problems."],
+     "context": [""]
+    },
+    {"tag": "request_data",
+     "patterns": ["I need data for COVID-19 detection", "Data for training ResNet", "Where can I find datasets for pneumonia detection?", "Give me relevant data"],
+     "responses": ["For COVID-19 data, you can explore sources like the World Health Organization. For pneumonia data, try medical imaging datasets and research institutions."],
+     "context": [""]
+    },
+    {"tag": "evaluation_metrics",
+     "patterns": ["How to evaluate COVID-19 detection?", "Pneumonia detection metrics", "What are the evaluation metrics for my model?", "Measure model performance"],
+     "responses": ["Common metrics for evaluation include accuracy, precision, recall, F1 score, and ROC AUC. Let me know if you need more details."],
+     "context": [""]
+    },
+    {"tag": "after_covid19_test",
+    "patterns": ["I tested positive for COVID-19, what should I do?", "What are the next steps after a positive COVID-19 test?", "COVID-19 positive, now what?"],
+    "responses": ["I'm sorry to hear about your positive test. It's essential to self-isolate, inform close contacts, and follow medical advice."],
+    "context": [""]
+    },
+    {"tag": "after_pneumonia_diagnosis",
+    "patterns": ["The doctor diagnosed me with pneumonia, what's the treatment plan?", "Pneumonia diagnosis, now what?", "I have pneumonia, what should I expect?"],        "responses": ["Your treatment plan may involve antibiotics, rest, and fluids. Follow your doctor's guidance closely for a full recovery."],
+    "context": [""]
+    },
+    {"tag": "symptom_management",
+    "patterns": ["How can I manage COVID-19 symptoms at home?", "Managing COVID-19 symptoms", "Home remedies for pneumonia symptoms", "Relieving pneumonia symptoms"],
+    "responses": ["Rest, hydrate, and take over-the-counter medications as advised by a healthcare professional. Monitor your symptoms and seek medical attention if they worsen."],
+    "context": [""]
+    },
+    {"tag": "retesting",
+    "patterns": ["When should I get retested for COVID-19?", "COVID-19 test retesting", "Pneumonia follow-up tests", "Do I need a follow-up test for pneumonia?"],
+    "responses": ["Follow your healthcare provider's guidance on retesting. It depends on your condition and local health guidelines."],
+    "context": [""]
+    },
+    {"tag": "vaccination",
+    "patterns": ["Should I get vaccinated after recovering from COVID-19?", "COVID-19 recovery and vaccination", "Pneumonia and vaccination", "Vaccination after pneumonia"],
+    "responses": ["Vaccination is recommended, even after recovery. Discuss the timing with your healthcare provider."],
+    "context": [""]
+    },
+    {"tag": "post_recovery_care",
+    "patterns": ["What care is needed after recovering from COVID-19?", "Post-COVID-19 recovery", "Recovery care after pneumonia", "Life after pneumonia"],
+    "responses": ["Post-recovery care includes regaining strength gradually, staying active, and regular check-ups. Your healthcare provider can guide you."],
+    "context": [""]
+    },
+    {"tag": "mental_health_support",
+    "patterns": ["I'm feeling anxious after my diagnosis, where can I find mental health support?", "Mental health support after diagnosis", "Anxiety post-diagnosis", "Coping with diagnosis"],
+    "responses": ["It's normal to feel anxious. Reach out to mental health professionals or support groups for assistance."],
+    "context": [""]
+    },
+    {"tag": "prevention_advice",
+    "patterns": ["How can I prevent COVID-19 or pneumonia in the future?", "Preventing future infections", "Staying healthy", "Infection prevention tips"],
+    "responses": ["Prevention includes vaccination, hygiene, and a healthy lifestyle. Consult your healthcare provider for personalized advice."],
+    "context": [""]
+    },
+    {"tag": "plantation",
+    "patterns": ["wheat plantation"],
+    "responses": ["january"],
+    "context": [""]
+
+    }
+]
+}
